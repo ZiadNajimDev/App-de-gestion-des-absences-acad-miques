@@ -22,29 +22,40 @@ Cette application permet la gestion efficace des absences académiques pour les 
 
 ### Configuration de la base de données
 
-1. Installer XAMPP et démarrer les services Apache et MySQL
-2. Accéder à phpMyAdmin via `http://localhost/phpmyadmin`
-3. Créer une nouvelle base de données nommée `localconnect`
-4. Importer le fichier `localconnect(1).sql` dans cette base de données
+1. Installer XAMPP et démarrer les services Apache et MySQL.
+2. Accéder à phpMyAdmin via `http://localhost/phpmyadmin`.
+3. Créer une nouvelle base de données nommée `localconnect`.
+4. Importer le fichier `localconnect(1).sql` dans cette base de données.
 
 ### Configuration du backend PHP
 
-1. Placer le dossier `localconnectphp` dans le répertoire htdocs de XAMPP
+1. Placer le dossier `localconnectphp` dans le répertoire htdocs de XAMPP :
    ```
    Exemple : C:\xampp\htdocs\localconnect
    ```
 
 ### Configuration de l'application Flutter
 
-1. Créer un nouveau projet Flutter nommé `attendance_app`
+1. Créer un nouveau projet Flutter nommé `attendance_app`.
    ```bash
    flutter create attendance_app
    ```
-2. Remplacer le dossier `lib` du projet par celui fourni dans ce dépôt
-3. Remplacer le fichier `pubspec.yaml` par celui fourni dans ce dépôt
-4. Installer les dépendances
+2. Remplacer le dossier `lib` du projet par celui fourni dans ce dépôt.
+3. Remplacer le fichier `pubspec.yaml` par celui fourni dans ce dépôt.
+4. Installer les dépendances :
    ```bash
    flutter pub get
+   ```
+5. **Changer l'adresse IP de l'API :**  
+   Ouvrez votre terminal (ou invite de commandes) et exécutez la commande suivante pour obtenir l'adresse IP de votre ordinateur :
+   ```bash
+   ipconfig
+   ```
+   Remplacez l'adresse IP existante dans le code Flutter (généralement dans les fichiers de services ou de configuration réseau) par l'adresse IPv4 de votre machine.  
+   **Exemple :**  
+   Si votre adresse IPv4 est `192.168.1.10`, mettez à jour l'URL de l'API dans le code comme suit :
+   ```dart
+   http://192.168.1.10/localconnectphp
    ```
 
 ## 📝 Guide d'installation étape par étape
@@ -78,9 +89,12 @@ Placer le dossier `localconnectphp` dans le répertoire htdocs de XAMPP.
 Exemple : `C:\xampp\htdocs\localconnect`
 
 ### Étape 8
-Démarrer les services Apache et MySQL dans le panneau de contrôle XAMPP.
+Changer l'adresse IP de l'API dans le code Flutter comme mentionné dans la section précédente.
 
 ### Étape 9
+Démarrer les services Apache et MySQL dans le panneau de contrôle XAMPP.
+
+### Étape 10
 Lancer votre projet Flutter :
 ```bash
 flutter run
@@ -109,7 +123,7 @@ attendance_app/
 ## 👥 Contributeurs
 
 - [ZiadNajimDev](https://github.com/ZiadNajimDev)
-
+- [IsmailLaouan](https://github.com/ismaillaa)
 ## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus d'informations.
